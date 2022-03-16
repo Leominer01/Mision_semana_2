@@ -1,0 +1,84 @@
+body{ background-color: bisque;
+
+              label, fieldset {
+                font-weight: bold;
+            }
+            fieldset label, input {
+                font-weight: normal;
+            }
+            fieldset {
+                margin-bottom: 20px;
+              padding: 5px;
+            }
+            select {
+                margin-bottom: 30px;
+              font-size:14px;
+            }
+            .errorMsg, .reqField {
+                color:#bb4e00;
+            }
+            .errorMsg {
+                font-weight: normal;
+            }
+            input {
+              font-size:16px;
+              padding: 4px;
+              color:#333;
+            }
+            /* Accessible form styles end */
+            
+            /* hides content from sighted users, can be accessed by screen reader */
+            .element-invisible {
+                position: absolute !important;
+                height: 1px; width: 1px; 
+                overflow: hidden;
+                clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+                clip: rect(1px, 1px, 1px, 1px);
+            }
+            
+            /* set up hidden tooltip */
+            [role="tooltip"] {
+                display: none;
+                padding: 0.25em;
+                margin: 0;
+                color: #666;
+                width: 100%;
+                z-index: 2;
+                font-weight: normal;
+                font-style: italic;
+            }
+            
+            /* reveal associated tooltip on focus of preceeding input */
+            input:focus + [role="tooltip"] {
+                display: block;
+            }
+            
+            /* Reference: http://tympanus.net/codrops/2012/10/04/custom-drop-down-list-styling/ */
+            
+            /* GLOBALS */
+            *,
+            *:after,
+            *:before {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                padding: 0;
+              font-family: sans-serif;
+                /*    margin: 0; */
+            }
+            
+            ::selection {
+                background: white; 
+            }
+            
+            ::-moz-selection {
+                background: red; 
+            }
+            
+            #content-wrapper {
+              width: 60%;
+              margin: 0 auto;
+              min-width: 320px;
+              max-width: 800px;
+            }
+            

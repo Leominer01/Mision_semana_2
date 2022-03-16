@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Accessible Form Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <!--CSS y JS linkeados--> 
+   <link href="orden_style.css" rel="stylesheet" type="text/css">
+   <link href="cereza.js" rel="stylesheet" type="js">
+
+
+   <body>
+      <article>background</article>
+     <div id="content-wrapper">
+      <h1>Formulario para pedido:</h1>
+      <p></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non tempore earum aliquid labore omnis saepe aut repudiandae quo. Minus nobis impedit blanditiis pariatur rerum, facere consequuntur atque. Aliquam, quia!</p>
+      <p></p>
+      <hr>
+      </hr>
+      <h2>Rellene los campos</h2>
+      <form action="#" name="myForm" onsubmit="return validateForm()" method="get">
+         <p><label for="fname">Nombre:<span class="reqField">*</span><span class="element-invisible" id="fnameErrorHidden"></span></label><br />
+            <input id="fname" type="text" name="textfield"/>
+           <span class="errorMsg" id="fnameError"></span>
+           <p><label for="lname">Apellidos:<span class="reqField">*</span><span class="element-invisible" id="lnameErrorHidden"></span></label><br />
+            <input id="lname" type="text" name="textfield"/>
+            <span class="errorMsg" id="lnameError"></span>
+         </p>
+         <div><label for="sample">Correo electronico:<span class="reqField">*</span><span class="errorMsg" id="sampleError"></span></label><br />
+            <input id="sample" type="text" name="textfield2" aria-describedby="sample-tip"/>
+         <div role="tooltip" id="sample-tip">Hint: Type anything here.</div>
+         </div>
+         <br>
+         <div><label for="sample">Numero telefonico o celular:<span class="reqField">*</span><span class="errorMsg" id="sampleError"></span></label><br />
+            <input id="sample" type="text" name="textfield2" aria-describedby="sample-tip"/>
+         <div role="tooltip" id="sample-tip">Hint: Type anything here.</div>
+         </div>
+<!--Menu para decoraciones-->
+         <p>
+            <fieldset>
+               <legend  id="decoracionLegend">Elige tu decoración:<span class="reqField">*</span><span class="errorMsg" id="toppingsLegendError"></span></legend>
+               <input id="velas" type="checkbox" name="decoracion" value="velas"/>
+               <label for="velas">velas</label><br>
+               <input id="velas numero" type="checkbox" name="decoracion" value="velas"/>
+               <label for="velas numero">velas numero</label><br>
+               <input id="globo" type="checkbox" name="decoracion" value="pepperoni">
+              <label for="globo"><span aria-label="globos">Globos,</span> <span aria-hidden="true"></span></label><br>
+               <input id="platos desechables" type="checkbox" name="decoracion" value="desechables">
+               <label for="desechables">Platos desechables (10) con cuchillo y tenedos de plastico</label><br>
+               <br>
+               <!--<input id="olives" type="checkbox" name="decoracion" value="olives">
+               <label for="olives">Olives</label>
+            </fieldset>
+         </p>
+<!--Metodo para recoger o servicio a domicilio-->
+         <fieldset>
+            <legend  id="llegadaLegend">Para recoger o servicio a domicilio:<span class="reqField">*</span><span class="errorMsg" id="shippingLegendError"></span></legend>
+            <input id="Recoger" type="radio" name="llegada" value="Recoger" checked/>
+            <label for="Recoger">Recoger</label><br>
+            <input id="Servicio a domicilio" type="radio" name="llegada" value="Servicio a domicilio">
+            <label for="Servicio a domicilio">Servicio a domicilio</label><br>
+<!--Menu para cantidad de personas-->
+         </fieldset>
+         <label id="favcityLabel" for="favcity" >Choose your favorite city?<span class="reqField">*</span><span class="errorMsg" id="favcityError"></span></label><br />
+         <select id="favcity" name="select" aria-labelledby="favcityLabel">
+            <option value="0">Select</option>
+            <option value="1">Para 6 personas</option>
+            <option value="2">Para 10 personas</option>
+         </select>
+         <div><input type="submit" name="submit" value="Submit"/>
+            <input type="reset" name="reset" value="Reset"/>
+         </div>
+     </form></div>
+   </body>
+</html>
